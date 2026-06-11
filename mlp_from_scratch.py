@@ -210,7 +210,7 @@ def draw_dot(root):
 # dot.render("graph" , view=True)
 
 # Epoch count
-epoch = 100
+epoch = 5
 
 #Input
 xs = [
@@ -244,8 +244,8 @@ for k in range(epoch):
     ## Backward pass
     loss.backward()
 
-    # dot = draw_dot(loss)
-    # dot.render(f"graph{k+1}" , view=True)
+    dot = draw_dot(loss)
+    dot.render(f"graph{k+1}" , view=True)
 
     ## Update the parameters
     for p in n.parameters():
