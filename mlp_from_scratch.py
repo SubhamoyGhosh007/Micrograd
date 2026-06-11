@@ -245,7 +245,7 @@ for k in range(epoch):
     loss.backward()
 
     dot = draw_dot(loss)
-    dot.render(f"graph{k+1}" , view=True)
+    dot.render(f"./graph/graph{k+1}" , view=True)
 
     ## Update the parameters
     for p in n.parameters():
